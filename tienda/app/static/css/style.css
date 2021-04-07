@@ -57,8 +57,8 @@ span.carousel-control-next-icon{
 /*---------------------FIN -----------*/
 
 
-/*------------Start Seccion destacados y new -----------*/
-.imgDesta{
+/*------------Start Seccion destacados y new  sin card -----------*/
+/* .imgDesta{
   -o-object-fit: cover;
     object-fit: cover;
     height: 250px;
@@ -83,7 +83,7 @@ span.carousel-control-next-icon{
     flex-wrap: wrap;
     margin-right: -15px;
     margin-left: -15px;
-}
+} */
 
 /*-----------------FIN DESTACADOS Y NUEVOS -----------*/
 
