@@ -4,4 +4,38 @@ div .dropdown-toggle {
 .navbar-brand{
     color:black;
 }
+.carousel {
+    margin-bottom: 0;
+	padding: 0 40px 30px 40px;
+}
 
+
+.carousel-inner img {
+ height: 625px;
+margin: auto;
+   
+   
+}
+div.carousel-inner {
+ 
+height: 625px;
+margin: auto;
+ 
+   
+}
+.carousel-inner{
+  margin-top: 200px;
+  height: auto;
+}
+div .flayer{
+    height: 633px;
+    width: 663px;
+}
+
+span.carousel-control-prev-icon{
+  background-color: rgb(145, 6, 52);
+}
+span.carousel-control-next-icon{
+  color: #D67B1E;
+  background-color: rgb(145, 6, 52);
+}
