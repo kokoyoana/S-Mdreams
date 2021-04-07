@@ -1,3 +1,11 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: o none;
+  position: relative;
+}
+
+
 div .dropdown-toggle {
     font-size: 22px;
 }
@@ -39,3 +47,51 @@ span.carousel-control-next-icon{
   color: #D67B1E;
   background-color: rgb(145, 6, 52);
 }
+
+
+
+.marginAviso{
+  padding: 150px 30px 25px 30px; 
+  background-color: #ffffff;
+}
+/*---------------------FIN -----------*/
+
+
+/*------------Start Seccion destacados y new -----------*/
+.imgDesta{
+  -o-object-fit: cover;
+    object-fit: cover;
+    height: 250px;
+    width: 200px;
+}
+
+
+.img-fluida {
+  margin-bottom: -6px;
+  cursor: pointer
+}
+
+.img-fluida:hover {
+  opacity: 0.6;
+  transition: 0.3s;
+}
+
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+/*-----------------FIN DESTACADOS Y NUEVOS -----------*/
+
+
+  
+
+
+
+
+
+
