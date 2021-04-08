@@ -21,6 +21,8 @@ class Home(TemplateView):
     def get_context_data(self, **kwargs):
         context = super(Home, self).get_context_data(**kwargs)
         context['productos']= Producto.objects.all()
+        context['destacados']= Producto.objects.filter(destacados = True)[:3]
+        context['nuevos']= Producto.objects.filter(nuevos = True)[:3]
 
         return context
 
