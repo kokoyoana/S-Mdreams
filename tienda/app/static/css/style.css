@@ -88,8 +88,46 @@ span.carousel-control-next-icon{
 /*-----------------FIN DESTACADOS Y NUEVOS -----------*/
 
 
+/*-----------------Start Productos -----------*/
+
+div .row{
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+div .img-fluid {
+    max-width: 100%;
+    width: 314.750px;
+    height: 314.750px;
+}
+img {
+    border-style: none;
+    width: 300px;
+    height: auto;
+}
   
 
+
+body{
+    margin-top: 20px;
+}
+
+.grid_1_4{
+    text-align: center;
+     border: 2px solid #EEE;
+}
+
+.picture{
+    height: 200px;
+}
+
+.picture img{
+    max-height: 100%;
+    max-width: 100%;
+}
 
 
 
