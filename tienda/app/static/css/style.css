@@ -1,8 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  border: o none;
-  position: relative;
+ 
 }
 
 
@@ -96,7 +95,18 @@ div .row{
     flex-wrap: wrap;
     margin-right: -15px;
     margin-left: -15px;
+   
+   
 }
+.row{
+  text-align: center;
+width: 1246px;
+}
+div.esta{
+  margin-left: 55px;
+}
+
+
 
 div .img-fluid {
     max-width: 100%;
@@ -127,6 +137,10 @@ body{
 .picture img{
     max-height: 100%;
     max-width: 100%;
+}
+
+.parrafos{
+  font-family: 'Open Sans', sans-serif;
 }
 
 

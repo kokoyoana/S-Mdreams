@@ -142,32 +142,34 @@
   <!-- /////////////*start DESTACADOS*////////////////// -->
 
 
-  <div class="row justify-content-center mb-3 pb-3">
+  <div class="" style="margin-left: -29px;">
     <div class="col-md-7 heading-section ftco-animate text-center fadeInUp ftco-animated mrRespon">
-      <h2 class="mb-3 mt-4 " style="font: italic bold 40px , Serif;">Los artículos más Destacados</h2>
+      <h2 class="mb-3 mt-4 parrafos ">Artículos Destacados</h2>
 
     </div>
   </div>
-  <div class="row">
-    {% for p in destacados %}
-    <div class="col-md-3 col-6 product-block">
+  <div class="container" style="margin-right: 0;">
+    <div class="row">
+      {% for p in destacados %}
+      <div class="col-md-3 col-6 product-block">
 
-      <a href=""><img class="img-fluid img-portfolio img-hover mb-3" src="{{ p.imgPro1.url }}">
-        <div class="caption">
-          <h3><a href=""> {{ p.nombre }} </a></h3>
-          <div class="price-mob">
-             {{ p.precio }}
+        <a href=""><img class="img-fluid img-portfolio img-hover mb-3" src="{{ p.imgPro1.url }}">
+          <div class="caption">
+            <h3><a href=""> {{ p.nombre }} </a></h3>
+            <div class="price-mob">
+              {{ p.precio }}
+            </div>
+            <div class="clearfix"></div>
+
+
+
           </div>
-          <div class="clearfix"></div>
 
+      </div>
+      {% endfor %}
 
-
-        </div>
 
     </div>
-    {% endfor %}
-
-
   </div>
 
   <!-- <section class="ftco-section mt-5 mb-4" otra forma de crear catalogo>
@@ -255,36 +257,37 @@
   </section> -->
   <!-- /////////////*START NEW*////////////////// -->
 
-  <div class="row justify-content-center mb-3 pb-3">
+  <div class="row  mb-3 pb-3"style="margin-left: 219px;>
     <div class="col-md-7 heading-section ftco-animate text-center fadeInUp ftco-animated mrRespon">
-      <h2 class="mb-3 mt-4 " style="font: italic bold 40px , Serif;">Los artículos más nuevos</h2>
+      <h2 class="mb-3 mt-4 parrafos">Nuevos Productos</h2>
 
     </div>
   </div>
-  <div class="row">
-    {% for p in nuevos %}
-    <div class="col-md-3 col-6 product-block">
 
-      <a href=""><img class="img-fluid img-portfolio img-hover mb-3" src="{{ p.imgPro1.url }}">
-        <div class="caption">
-          <h3><a href=""> {{ p.nombre }} </a></h3>
-          <div class="price-mob">
-            {{ p.precio }}
+    <div class="container" style="margin-right: 0;">
+    <div class="row" style="width: 1255px;">
+      {% for p in nuevos %}
+      <div class="col-md-3 col-6 product-block">
+
+        <a href=""><img class="img-fluid img-portfolio img-hover mb-3" src="{{ p.imgPro1.url }}">
+          <div class="caption">
+            <h3><a href=""> {{ p.nombre }} </a></h3>
+            <div class="price-mob">
+              {{ p.precio }}
+            </div>
+            <div class="clearfix"></div>
+
+
+
           </div>
-          <div class="clearfix"></div>
 
+      </div>
+      {% endfor %}
 
-
-        </div>
 
     </div>
-    {% endfor %}
-
-
   </div>
-
-
-
+  
 
   <!--  <section class="ftco-section mt-5 mb-4" otra forma de colocar imagenes>
     <div class="container">
@@ -412,13 +415,13 @@
   </div> -->
 
 
-  <div class="row justify-content-center mb-3 pb-3">
+  <div class="row mb-3 pb-3">
     <div class="col-md-7 heading-section ftco-animate text-center fadeInUp ftco-animated mrRespon">
-      <h2 class="mb-3 mt-4 " style="font: italic bold 40px , Serif;">Algunos de nuestros productos</h2>
+      <h2 class="mb-3 mt-4 parrafos">Algunos de nuestros productos</h2>
 
     </div>
   </div>
-  <div class="row">
+  <div class="row esta">
     {% for p in productos %}
     <div class="col-md-3 col-6 product-block">
 
@@ -426,7 +429,7 @@
         <div class="caption">
           <h3><a href=""> {{ p.nombre }} </a></h3>
           <div class="price-mob">
-             {{ p.precio }}
+            {{ p.precio }}
           </div>
           <div class="clearfix"></div>
 
