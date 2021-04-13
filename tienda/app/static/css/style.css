@@ -4,6 +4,31 @@
  
 }
 
+@media (min-width: 1200px){
+.container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 1152px;
+   
+  }
+}
+@media (min-width: 1200px){
+div.Contacarrousel{
+    max-width: 1153px;
+   
+  }
+}
+@media (min-width: 1200px){
+.container.ContaDestacados{
+    max-width: 1160px;
+   
+  }
+}
+
+
+body{
+  
+  background-color: #CFEAE8;
+
+}
 
 div .dropdown-toggle {
     font-size: 22px;
@@ -39,13 +64,6 @@ div .flayer{
     width: 663px;
 }
 
-span.carousel-control-prev-icon{
-  background-color: rgb(145, 6, 52);
-}
-span.carousel-control-next-icon{
-  color: #D67B1E;
-  background-color: rgb(145, 6, 52);
-}
 
 
 
@@ -53,6 +71,46 @@ span.carousel-control-next-icon{
   padding: 150px 30px 25px 30px; 
   background-color: #ffffff;
 }
+
+
+
+.container.prueba{
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1250px;
+}
+.container{
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1250px;
+}
+.container.cf{
+     max-width: 1262px;
+}
+.container.ContaDestacados{
+     max-width: 1149px;
+}
+
+.CentraImagen{
+  margin-left: 100px;
+}
+.caption{
+  margin-left: 200px;
+
+}
+
+.caption.nombre{
+  margin-left: 0px;
+
+}
+
+
 /*---------------------FIN -----------*/
 
 
@@ -93,8 +151,7 @@ div .row{
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px;
+   
    
    
 }
@@ -143,6 +200,68 @@ body{
   font-family: 'Open Sans', sans-serif;
 }
 
+
+
+
+
+/*FOOTER START///////////////////*/
+.footer {
+    padding: 50px 0 20px 0;
+    background-color: #090c14;
+    color: #878c94;
+}
+.footer .title{
+	text-align: left;
+	color:#fff;
+	font-size:25px;
+}
+.footer .social-icon{
+	padding:0px;
+	margin:0px;
+}
+.footer .social-icon a{
+	display:inline-block;
+	color:#fff;
+	font-size:25px;
+	padding:5px;
+}
+.footer .acount-icon a{
+	display:block;
+	color:#fff;
+	font-size:18px;
+	padding:5px;
+	text-decoration:none;
+}
+.footer .acount-icon .fa{
+	margin-right:25px;
+}
+.footer .category a {
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    padding: 5px 20px;
+    margin: 1px;
+    border-radius:4px;
+    margin-top: 6px;
+    background-color: black;
+    border: solid 1px #fff;
+}
+.footer .payment{
+	margin:0px;
+	padding:0px;
+	list-style-type:none
+}
+.footer .payment li{
+	list-style-type:none
+}
+.footer .payment li a {
+    text-decoration: none;
+    display: inline-block;
+    color: #fff;
+    float:left;
+    font-size: 25px;
+    padding: 10px 10px;
+}
 
 
 
