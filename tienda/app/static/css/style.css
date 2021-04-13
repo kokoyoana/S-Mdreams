@@ -6,13 +6,13 @@
 
 @media (min-width: 1200px){
 .container, .container-lg, .container-md, .container-sm, .container-xl {
-    max-width: 1152px;
+  max-width: 1255px !important;
    
   }
 }
 @media (min-width: 1200px){
 div.Contacarrousel{
-    max-width: 1153px;
+  max-width: 1153px;
    
   }
 }
@@ -22,22 +22,29 @@ div.Contacarrousel{
    
   }
 }
+@media (min-width: 1200px){
+div.container.prueba{
+    max-width: 1261px;
+   
+  }
+}
+
 
 
 body{
   
-  background-color: #CFEAE8;
+  background-color: #F6F7F8;
 
 }
 
 div .dropdown-toggle {
-    font-size: 22px;
+  font-size: 22px;
 }
 .navbar-brand{
-    color:black;
+  color:black;
 }
 .carousel {
-    margin-bottom: 0;
+  margin-bottom: 0;
 	padding: 0 40px 30px 40px;
 }
 
@@ -64,51 +71,11 @@ div .flayer{
     width: 663px;
 }
 
-
-
-
-.marginAviso{
-  padding: 150px 30px 25px 30px; 
-  background-color: #ffffff;
+.product-block{
+  margin-left: 80px;
 }
 
 
-
-.container.prueba{
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-    max-width: 1250px;
-}
-.container{
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-    max-width: 1250px;
-}
-.container.cf{
-     max-width: 1262px;
-}
-.container.ContaDestacados{
-     max-width: 1149px;
-}
-
-.CentraImagen{
-  margin-left: 100px;
-}
-.caption{
-  margin-left: 200px;
-
-}
-
-.caption.nombre{
-  margin-left: 0px;
-
-}
 
 
 /*---------------------FIN -----------*/
