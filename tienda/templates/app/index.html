@@ -25,61 +25,23 @@
 
         <div id="navbarSupportedContent" class="collapse navbar-collapse">
           <ul class="navbar-nav ml-auto">
+                 {% for p in categorias %}
             <div class="dropdown">
               <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
-                Bebe
+                  {{ p.nombre }}
               </button>
+                 {% for p in categorias %}
               <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="{% url 'app:producto' p.id %}">{{ p.nombre }}"> {{ p.nombre }}</a>
                 <a class="dropdown-item" href="#">Another action</a>
                 <a class="dropdown-item" href="#">Something else here</a>
+
+                  {% endfor %}
               </div>
+             
             </div>
-            <div class="dropdown">
-              <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
-                Mamá
-              </button>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <a class="dropdown-item" href="#">Something else here</a>
-              </div>
-            </div>
-            <div class="dropdown">
-              <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
-                Bolsas y Mochilas
-              </button>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <a class="dropdown-item" href="#">Something else here</a>
-              </div>
-            </div>
-            <div class="dropdown">
-              <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
-                Regalos
-              </button>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <a class="dropdown-item" href="#">Something else here</a>
-              </div>
-            </div>
-            <div class="dropdown">
-              <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
-                Hogar
-              </button>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <a class="dropdown-item" href="#">Something else here</a>
-              </div>
-            </div>
+            {% endfor %}
             <i class="fas fa-cart-arrow-down  fa-2x"></i>
           </ul>
         </div>
@@ -141,7 +103,7 @@
   <div class="container ContaDestacados">
     <div class="">
       <div class="col-md-7 heading-section ftco-animate text-center fadeInUp ftco-animated mrRespon"style="margin: auto;">
-        <h2 class="mb-3 mt-4 parrafos ">Artículos Destacados</h2>
+        <h2 class="mb-5 mt-4 parrafos ">Artículos Destacados</h2>
 
       </div>
     </div>
@@ -257,7 +219,7 @@
   <div class="container ContaDestacados">
     <div class="">
       <div class="col-md-7 heading-section ftco-animate text-center fadeInUp ftco-animated mrRespon"style="margin: auto;">
-        <h2 class="mb-3 mt-4 parrafos ">Artículos Nuevos</h2>
+        <h2 class="mb-5 mt-5 parrafos ">Artículos Nuevos</h2>
 
       </div>
     </div>
@@ -414,7 +376,7 @@
   <div class="container prueba">
     <div>
       <div class="col-md-7 heading-section ftco-animate text-center fadeInUp ftco-animated mrRespon" style="margin: auto;">
-        <h2 class="mb-3 mt-4 parrafos ">Algunos de nuestros productos</h2>
+        <h2 class="mb-5 mt-5 parrafos ">Algunos de nuestros productos</h2>
 
       </div>
     </div>
@@ -442,8 +404,11 @@
 
     </div>
   </div>
-
-
+ 
+ 
+            
+               
+            
   <!-- /////////////*start  Footeer*////////////////// -->
 
   <footer class="footer">
@@ -461,11 +426,11 @@
           </ul>
         </div>
         <div class="col-sm-3">
-          <h4 class="title">My Account</h4>
+          <h4 class="title">Contactanos</h4>
           <span class="acount-icon">
             <a href="#"><i class="fa fa-heart" aria-hidden="true"></i> List</a>
             <a href="#"><i class="fa fa-users" aria-hidden="true"></i>Group</a>
-            <a href="#"><i class="fa fa-user" aria-hidden="true"></i> Profile</a>
+            <a href="#"><i class="fa fa-user" aria-hidden="true"></i> SMdreams@gmail.com</a>
             <a href="#"><i class="fa fa-globe" aria-hidden="true"></i> Language</a>
           </span>
         </div>

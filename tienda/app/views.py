@@ -27,15 +27,36 @@ class Home(TemplateView):
         return context
 
 
-class Tienda(ListView):
+
+class Categorias(ListView):
+    model =  Categoria
+    template_name = 'app/index.html'
+    context_object_name= 'categorias' 
+    queryset = Categoria.objects.all()
+    
+
+    def get_context_data(self,**kwargs):
+        context=super(Categorias, self).get_context_data(**kwargs)
+        context['productos']= Producto.objects.all()
+        context['destacados']= Producto.objects.filter(destacados = True)[:3]
+        context['nuevos']= Producto.objects.filter(nuevos = True)[:3]
+
+        return context
+
+
+
+class Tienda(DetailView):
     template_name = 'app/index.html'
     queryset = Producto.objects.all()
     model = Producto
 
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-
-        context['productos']= Producto.objects.all()
+    def get_context_data(self,**kwargs):
+        context=super(Tienda, self).get_context_data(**kwargs)
+        idSer = self.kwargs.get('pk',None)
+        context['especialidad'] = Producto.objects.filter(servicio_id=idSer)
+        context['infoSer']= Producto.objects.get(pk = idSer)
+        context['servi'] = Producto.objects.all()
+        context['categoria']= Categoria.objects.all()
         context['destacados']= Producto.objects.filter(destacados = True)[:3]
         context['nuevos']= Producto.objects.filter(nuevos = True)[:3]
         return context
