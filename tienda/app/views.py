@@ -20,44 +20,36 @@ class Home(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super(Home, self).get_context_data(**kwargs)
+        idSer = self.kwargs.get('pk',None)
+        context['especialidad'] = Producto.objects.filter(categoria_id=idSer)
         context['categorias']= Categoria.objects.all()
         context['productos']= Producto.objects.all()
         context['destacados']= Producto.objects.filter(destacados = True)[:3]
         context['nuevos']= Producto.objects.filter(nuevos = True)[:3]
+        context['algunos']= Producto.objects.filter(algunos = True)[:6]
 
         return context
 
 
-
-class Secciones(ListView):
-    model =  Categoria
+class Categorias(ListView):
     template_name = 'app/index.html'
     context_object_name= 'categorias' 
     queryset = Categoria.objects.all()
+    model = Categoria
     
-
     def get_context_data(self,**kwargs):
-        context=super(Secciones, self).get_context_data(**kwargs)
-        context['categorias']= Categoria.objects.all()
-        context['productos']= Producto.objects.all()
-        context['destacados']= Producto.objects.filter(destacados = True)[:3]
-        context['nuevos']= Producto.objects.filter(nuevos = True)[:3]
+        context=super(Categorias, self).get_context_data(**kwargs)
 
         return context
 
 
-
-class Tienda(DetailView):
+class InfoProducto(DetailView):
     template_name = 'app/index.html'
-    queryset = Producto.objects.all()
-    model = Producto
+    model = Categoria
 
     def get_context_data(self,**kwargs):
-        context=super(Tienda, self).get_context_data(**kwargs)
+        context=super(InfoProducto, self).get_context_data(**kwargs)
         idSer = self.kwargs.get('pk',None)
         context['especialidad'] = Producto.objects.filter(servicio_id=idSer)
         context['infoSer']= Producto.objects.get(pk = idSer)
         context['servi'] = Producto.objects.all()
-        context['destacados']= Producto.objects.filter(destacados = True)[:3]
-        context['nuevos']= Producto.objects.filter(nuevos = True)[:3]
-        return context
