@@ -168,15 +168,7 @@ body{
   font-size: 45px;
 }
 
-.listArrow>a:before{  /*flecha de la lista desplegable*/
-  top: 0;
-  right: 0px;
-  font-size: 13px;
-  content: '\f0d7';
-  position: absolute;
-  line-height: inherit;
-  font-family: FontAwesome;
-}
+
 
 
 

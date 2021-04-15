@@ -20,6 +20,7 @@ class Home(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super(Home, self).get_context_data(**kwargs)
+        context['categorias']= Categoria.objects.all()
         context['productos']= Producto.objects.all()
         context['destacados']= Producto.objects.filter(destacados = True)[:3]
         context['nuevos']= Producto.objects.filter(nuevos = True)[:3]
@@ -28,7 +29,7 @@ class Home(TemplateView):
 
 
 
-class Categorias(ListView):
+class Secciones(ListView):
     model =  Categoria
     template_name = 'app/index.html'
     context_object_name= 'categorias' 
@@ -36,7 +37,8 @@ class Categorias(ListView):
     
 
     def get_context_data(self,**kwargs):
-        context=super(Categorias, self).get_context_data(**kwargs)
+        context=super(Secciones, self).get_context_data(**kwargs)
+        context['categorias']= Categoria.objects.all()
         context['productos']= Producto.objects.all()
         context['destacados']= Producto.objects.filter(destacados = True)[:3]
         context['nuevos']= Producto.objects.filter(nuevos = True)[:3]
@@ -56,7 +58,6 @@ class Tienda(DetailView):
         context['especialidad'] = Producto.objects.filter(servicio_id=idSer)
         context['infoSer']= Producto.objects.get(pk = idSer)
         context['servi'] = Producto.objects.all()
-        context['categoria']= Categoria.objects.all()
         context['destacados']= Producto.objects.filter(destacados = True)[:3]
         context['nuevos']= Producto.objects.filter(nuevos = True)[:3]
         return context
