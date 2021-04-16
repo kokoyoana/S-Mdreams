@@ -29,12 +29,12 @@
             <div class="dropdown">
               <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
-                {{ p.nombre }}
+                {{ p.nombreCategoria }}
               </button>
 
               <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  {% for p in especialidad %}
-                <a class="dropdown-item" href="">{{ p.nombre }}</a>
+                  {% for i in infopro %}
+                <a class="dropdown-item" href="">{{ i.nombreproducto }}</a>
                 
                   {% endfor %}
 
@@ -115,7 +115,7 @@
         <a href=""><img class="img-fluid img-portfolio img-hover CentraImagen mb-3" src="{{ p.imgPro1.url }}">
           <hr>
           <div class="caption">
-            <h3><a href=""> {{ p.nombre }} </a></h3>
+            <h3><a href=""> {{ p.nombreProducto }} </a></h3>
             <div class="price-mob">
               {{ p.precio }}$
             </div>
@@ -232,7 +232,7 @@
         <a href=""><img class="img-fluid img-portfolio img-hover CentraImagen mb-3" src="{{ p.imgPro1.url }}">
           <hr>
           <div class="caption">
-            <h3><a href=""> {{ p.nombre }} </a></h3>
+            <h3><a href=""> {{ p.nombrenombreProducto }} </a></h3>
             <div class="price-mob">
               {{ p.precio }}$
             </div>
@@ -384,13 +384,13 @@
     </div>
 
     <div class="row">
-      {% for p in productos %}
+      {% for p in algunos %}
       <div class="col-md-3 col-6">
 
         <a href=""><img class="img-fluid img-portfolio img-hover mb-3" src="{{ p.imgPro1.url }}">
           <hr>
           <div class="caption nombre">
-            <h3><a href=""> {{ p.nombre }} </a></h3>
+            <h3><a href=""> {{ p.nombrenombreProducto }} </a></h3>
             <div class="price-mob mb-3">
               {{ p.precio }}$
             </div>

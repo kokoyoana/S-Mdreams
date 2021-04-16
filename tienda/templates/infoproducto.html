@@ -1,7 +1,3 @@
-{% extends 'app/index.html' %} {% load static %} {% load bootstrap4 %} 
-
-{% block content%}
-<div class="container-fluid mb-5 marginAviso">
    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                   {% for i in especialidad %}
                 <a class="dropdown-item" href="">{{ i.nombreProducto }}</a>
@@ -9,5 +5,3 @@
                   {% endfor %}
 
               </div>
-
-{% endblock content%}
