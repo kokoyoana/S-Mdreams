@@ -25,16 +25,16 @@
 
         <div id="navbarSupportedContent" class="collapse navbar-collapse">
           <ul class="navbar-nav ml-auto">
-            {% for p in categorias %}
+            {% for categoria,productos in infopro.items %}
             <div class="dropdown">
               <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
-                {{ p.nombreCategoria }}
+                {{ categoria.nombreCategoria }}
               </button>
 
               <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  {% for i in infopro %}
-                <a class="dropdown-item" href="">{{ i.nombreproducto }}</a>
+                  {% for producto in productos %}
+                <a class="dropdown-item" href="">{{ producto.nombreProducto }}</a>
                 
                   {% endfor %}
 
@@ -406,7 +406,7 @@
 
     </div>
   </div>
-
+ 
 
 
 
