@@ -52,9 +52,13 @@ div .dropdown-toggle {
 .carousel-inner img {
  height: 625px;
 margin: auto;
-   
+
+
    
 }
+
+
+
 div.carousel-inner {
  
 height: 625px;
@@ -161,12 +165,25 @@ body{
 .picture img{
     max-height: 100%;
     max-width: 100%;
+
+}
+.parrafos{
+  font-size: 45px;
+  color: #878c94;
+  font-family: 'Lobster', cursive;
+}
+.fixed-top{
+  position:2;
+  
 }
 
-.parrafos{
-  font-family: 'Open Sans', sans-serif;
-  font-size: 45px;
+a{
+    color: black !important;
+    text-decoration: none;
+    background-color: transparent;
 }
+
+
 
 
 
@@ -177,7 +194,7 @@ body{
 /*FOOTER START///////////////////*/
 .footer {
     padding: 50px 0 20px 0;
-    background-color: #090c14;
+    background-color: rgb(55, 55, 92);
     color: #878c94;
 }
 .footer .title{
@@ -234,5 +251,39 @@ body{
 }
 
 
+hr.franjas{
+ height:5px;
+ border: none;
+ background-color: #FF9398;
+}
 
+
+
+.navbar a:hover, .subnav:hover .subnavbtn {
+  background-color: #FF5377;
+}
+div.row.pie{
+  text-align:left;
+  padding-left: 150px;
+}
+
+
+
+
+
+div.col-sm-3.columnas {
+    -ms-flex: 0 0 25%;
+    flex: 2 0 29%;
+    max-width: 32%;
+    padding-left: 114px;
+    padding-right: 0px;
+}
+
+div.col-sm-3.Fpagos {
+    -ms-flex: 0 0 25%;
+    flex: 2 0 29%;
+    max-width: 30%;
+    padding-left: 160px;
+    padding-right: 0px;
+}
 

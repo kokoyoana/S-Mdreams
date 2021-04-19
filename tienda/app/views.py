@@ -41,9 +41,9 @@ class Home(TemplateView):
         context['infopro'] = inicializar_productos()
         #context['categorias']= Categoria.objects.all()
         #context['productos']= Producto.objects.all() 
-        context['destacados']= Producto.objects.filter(destacados = True)[:3]
-        context['nuevos']= Producto.objects.filter(nuevos = True)[:3]
-        context['algunos']= Producto.objects.filter(algunos = True)[:6]
+        context['destacados']= Producto.objects.filter(destacados = True)[:4]
+        context['nuevos']= Producto.objects.filter(nuevos = True)[:4]
+        context['algunos']= Producto.objects.filter(algunos = True)[:8]
 
         return context
 
@@ -63,9 +63,9 @@ class Categorias(ListView):
         idSer = self.kwargs.get('pk',None)
         context['infopro'] = Categoria.objects.filter(categoria=idSer)
         context['productos'] = Producto.objects.all()
-        context['nuevos']= Producto.objects.filter(nuevos = True)[:3]
-        context['algunos']= Producto.objects.filter(algunos = True)[:6]
-        context['destacados']= Producto.objects.filter(destacados = True)[:3]
+        context['nuevos']= Producto.objects.filter(nuevos = True)[:4]
+        context['algunos']= Producto.objects.filter(algunos = True)[:8]
+        context['destacados']= Producto.objects.filter(destacados = True)[:4]
 
 
         return context
@@ -81,14 +81,26 @@ class Articulos(TemplateView):
         context=super(Articulos, self).get_context_data(**kwargs)
         idPro = self.kwargs.get('pk',None)
         context['infopro'] = Categoria.objects.filter(categoria=idPro)
-        print(idPro)
-        print(context['infopro'])
-
         context['categorias']= Categoria.objects.all()
         context['productos'] = Producto.objects.all()
-        context['nuevos']= Producto.objects.filter(nuevos = True)[:3]
-        context['algunos']= Producto.objects.filter(algunos = True)[:6]
-        context['destacados']= Producto.objects.filter(destacados = True)[:3]
+        context['nuevos']= Producto.objects.filter(nuevos = True)[:4]
+        context['algunos']= Producto.objects.filter(algunos = True)[:8]
+        context['destacados']= Producto.objects.filter(destacados = True)[:4]
 
 
+        return context
+
+
+
+class InfoProducto(DetailView):
+    template_name = 'app/infoproducto.html'
+    model = Producto
+
+    def get_context_data(self,**kwargs):
+        context=super(InfoProducto, self).get_context_data(**kwargs)
+        idCur = self.kwargs.get('pk',None)
+        context['infoproducto']= Producto.objects.get(pk = idCur)
+        context['cursos']= Producto.objects.all()
+
+  
         return context

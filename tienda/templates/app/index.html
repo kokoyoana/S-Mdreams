@@ -18,23 +18,23 @@
 
   <header class="header">
     <nav class="navbar navbar-expand-lg py-3">
-      <div class="container"><a href="#" class="navbar-brand text-uppercase">Home</a>
+      <div class="container"><a href="{% url 'app:inicio' %}" class="navbar-brand text-uppercase">Home</a>
         <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
-          class="navbar-toggler navbar-toggler-right"><i class="fa fa-bars"></i></button>
+          class="navbar-toggler navbar-toggler-right"style="color:#FF5377;"><i class="fa fa-bars"></i></button>
 
-        <div id="navbarSupportedContent" class="collapse navbar-collapse">
-          <ul class="navbar-nav ml-auto">
+        <div id="navbarSupportedContent" class="collapse navbar-collapse" >
+          <ul class="navbar-nav ml-auto ">
             {% for categoria,productos in infopro.items %}
             <div class="dropdown">
-              <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+              <button class="btn dropdown-toggle text-uppercase" type="button" id="dropdownMenuButton" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
                 {{ categoria.nombreCategoria }}
               </button>
 
               <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                   {% for producto in productos %}
-                <a class="dropdown-item" href="">{{ producto.nombreProducto }}</a>
+                <a class="dropdown-item" href="{% url 'app:infoproductos' producto.id %}">{{ producto.nombreProducto }}</a>
                 
                   {% endfor %}
 
@@ -54,8 +54,9 @@
 
   <section class="home-banner-area">
     <div class="banner-img">
+      <a href="{% url 'app:inicio' %}">
       <img class="img-fluid" style="width: 100%; height: auto;" src="{% static 'img/portada.jpg' %}"
-        alt="Imagen de fondo" />
+        alt="Imagen de fondo" /></a>
       <div class="overlay overlay-bg"></div>
     </div>
 
@@ -90,6 +91,7 @@
   </div>
 
 
+<hr class="franjas">
 
 
   <!-- /////////////*FIN Home*////////////////// -->
@@ -99,25 +101,26 @@
 
   <!-- /////////////*start DESTACADOS*////////////////// -->
 
-  <div class="container ContaDestacados">
-    <div class="">
+ 
+  <div class="container prueba">
+    <div>
       <div class="col-md-7 heading-section ftco-animate text-center fadeInUp ftco-animated mrRespon"
         style="margin: auto;">
-        <h2 class="mb-5 mt-4 parrafos ">Artículos Destacados</h2>
+        <h2 class="mb-5 mt-5 parrafos ">Productos Destacados</h2>
 
       </div>
     </div>
 
-    <div class="row filaDestacados">
-      {% for p in destacados %}
-      <div class="col-md-3 col-6 product-block">
+    <div class="row">
+      {% for producto in destacados %}
+      <div class="col-md-3 col-6">
 
-        <a href=""><img class="img-fluid img-portfolio img-hover CentraImagen mb-3" src="{{ p.imgPro1.url }}">
+        <a href=""><img class="img-fluid img-portfolio img-hover mb-3" src="{{ producto.imgPro1.url }}">
           <hr>
           <div class="caption">
-            <h3><a href=""> {{ p.nombreProducto }} </a></h3>
-            <div class="price-mob">
-              {{ p.precio }}$
+            <h3><a class="caption" href="{% url 'app:infoproductos' producto.id %}"> {{ producto.nombreProducto }} </a></h3>
+            <div class="price-mob mb-3">
+              {{ producto.precio }}€
             </div>
             <div class="clearfix"></div>
 
@@ -130,6 +133,7 @@
 
 
     </div>
+    <hr class="franjas">
   </div>
 
   <!-- <section class="ftco-section mt-5 mb-4" otra forma de crear catalogo>
@@ -216,25 +220,25 @@
         </div>
   </section> -->
   <!-- /////////////*START NEW*////////////////// -->
-  <div class="container ContaDestacados">
-    <div class="">
+ 
+  <div class="container prueba">
+    <div>
       <div class="col-md-7 heading-section ftco-animate text-center fadeInUp ftco-animated mrRespon"
         style="margin: auto;">
-        <h2 class="mb-5 mt-5 parrafos ">Artículos Nuevos</h2>
+        <h2 class="mb-5 mt-5 parrafos ">Productos Nuevos</h2>
 
       </div>
     </div>
+    <div class="row">
+      {% for producto in nuevos %}
+      <div class="col-md-3 col-6">
 
-    <div class="row filaDestacados">
-      {% for p in nuevos %}
-      <div class="col-md-3 col-6 product-block">
-
-        <a href=""><img class="img-fluid img-portfolio img-hover CentraImagen mb-3" src="{{ p.imgPro1.url }}">
+        <a href=""><img class="img-fluid img-portfolio img-hover mb-3" src="{{ producto.imgPro1.url }}">
           <hr>
-          <div class="caption">
-            <h3><a href=""> {{ p.nombrenombreProducto }} </a></h3>
-            <div class="price-mob">
-              {{ p.precio }}$
+          <div class="caption nombre">
+            <h3><a class="Titulo"href="{% url 'app:infoproductos' producto.id %}"> {{ producto.nombreProducto }} </a></h3>
+            <div class="price-mob mb-3">
+              {{ producto.precio }}€
             </div>
             <div class="clearfix"></div>
 
@@ -247,7 +251,11 @@
 
 
     </div>
+    <hr class="franjas">
   </div>
+
+
+  
 
   <!--  <section class="ftco-section mt-5 mb-4" otra forma de colocar imagenes>
     <div class="container">
@@ -382,17 +390,16 @@
 
       </div>
     </div>
-
     <div class="row">
-      {% for p in algunos %}
+      {% for producto in algunos %}
       <div class="col-md-3 col-6">
 
-        <a href=""><img class="img-fluid img-portfolio img-hover mb-3" src="{{ p.imgPro1.url }}">
+        <a href=""><img class="img-fluid img-portfolio img-hover mb-3" src="{{ producto.imgPro1.url }}">
           <hr>
           <div class="caption nombre">
-            <h3><a href=""> {{ p.nombrenombreProducto }} </a></h3>
+            <h3><a href="{% url 'app:infoproductos' producto.id %}"> {{ producto.nombreProducto }} </a></h3>
             <div class="price-mob mb-3">
-              {{ p.precio }}$
+              {{ producto.precio }}€
             </div>
             <div class="clearfix"></div>
 
@@ -408,6 +415,8 @@
   </div>
  
 
+ 
+
 
 
 
@@ -415,28 +424,17 @@
 
   <footer class="footer">
     <div class="container cf">
-      <div class="row">
-        <div class="col-sm-3">
-          <h4 class="title">About us</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin suscipit, libero a molestie consectetur,
-            sapien elit lacinia mi.</p>
-          <ul class="social-icon">
-            <a href="#" class="social"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-            <a href="#" class="social"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-            <a href="#" class="social"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-
-          </ul>
-        </div>
+      <div class="row pie">
+       
         <div class="col-sm-3">
           <h4 class="title">Contactanos</h4>
           <span class="acount-icon">
-            <a href="#"><i class="fa fa-heart" aria-hidden="true"></i> List</a>
-            <a href="#"><i class="fa fa-users" aria-hidden="true"></i>Group</a>
-            <a href="#"><i class="fa fa-user" aria-hidden="true"></i> SMdreams@gmail.com</a>
-            <a href="#"><i class="fa fa-globe" aria-hidden="true"></i> Language</a>
+            <a href="#"><i class="fas fa-phone"></i></i> 644497593</a>
+            <a href="#"><i class="fab fa-whatsapp"></i> Whatsapp</i></a>
+            <a href="#"><i class="fas fa-envelope-square"></i></i> SMdreams@gmail.com</a>
           </span>
         </div>
-        <div class="col-sm-3">
+        <div class="col-sm-3 columnas">
           <h4 class="title">Privacidad</h4>
           <div class="category">
             <a href="#">Aviso legal</a>
@@ -444,7 +442,7 @@
 
           </div>
         </div>
-        <div class="col-sm-3">
+        <div class="col-sm-3 Fpagos">
           <h4 class="title">Payment</h4>
           <p>Compra con seguridad</p>
           <ul class="payment">
