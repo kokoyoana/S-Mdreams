@@ -78,7 +78,9 @@ div .flayer{
 .product-block{
   margin-left: 80px;
 }
-
+.Contacarrousel {
+  padding-top: 100px;
+}
 
 
 
@@ -269,8 +271,6 @@ div.row.pie{
 
 
 
-
-
 div.col-sm-3.columnas {
     -ms-flex: 0 0 25%;
     flex: 2 0 29%;
@@ -286,4 +286,15 @@ div.col-sm-3.Fpagos {
     padding-left: 160px;
     padding-right: 0px;
 }
+
+/* Infoproducto */
+
+
+.navbar {
+    position: relative;
+    z-index: 1000;
+    min-height: 10px;
+    margin-bottom: -82px;
+}
+
 

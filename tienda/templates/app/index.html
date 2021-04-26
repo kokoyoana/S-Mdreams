@@ -7,7 +7,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>S&MDreams</title>
   <link rel="stylesheet" href="{% static 'css/style.css' %}" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
@@ -67,12 +67,11 @@
     </div>
   </section>
 
-
   <!-- /////////////*fin Banner*////////////////// -->
 
   <!-- /////////////*start Home*////////////////// -->
 
-
+{% block content%}
 
   <div class="container Contacarrousel">
     <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
@@ -115,7 +114,7 @@
       {% for producto in destacados %}
       <div class="col-md-3 col-6">
 
-        <a href=""><img class="img-fluid img-portfolio img-hover mb-3" src="{{ producto.imgPro1.url }}">
+        <a href="{% url 'app:infoproductos' producto.id %}"><img class="img-fluid img-portfolio img-hover mb-3" src="{{ producto.imgPro1.url }}">
           <hr>
           <div class="caption">
             <h3><a class="caption" href="{% url 'app:infoproductos' producto.id %}"> {{ producto.nombreProducto }} </a></h3>
@@ -233,7 +232,7 @@
       {% for producto in nuevos %}
       <div class="col-md-3 col-6">
 
-        <a href=""><img class="img-fluid img-portfolio img-hover mb-3" src="{{ producto.imgPro1.url }}">
+        <a href="{% url 'app:infoproductos' producto.id %}"><img class="img-fluid img-portfolio img-hover mb-3" src="{{ producto.imgPro1.url }}">
           <hr>
           <div class="caption nombre">
             <h3><a class="Titulo"href="{% url 'app:infoproductos' producto.id %}"> {{ producto.nombreProducto }} </a></h3>
@@ -253,6 +252,8 @@
     </div>
     <hr class="franjas">
   </div>
+
+  
 
 
   
@@ -394,7 +395,7 @@
       {% for producto in algunos %}
       <div class="col-md-3 col-6">
 
-        <a href=""><img class="img-fluid img-portfolio img-hover mb-3" src="{{ producto.imgPro1.url }}">
+        <a href="{% url 'app:infoproductos' producto.id %}"><img class="img-fluid img-portfolio img-hover mb-3" src="{{ producto.imgPro1.url }}">
           <hr>
           <div class="caption nombre">
             <h3><a href="{% url 'app:infoproductos' producto.id %}"> {{ producto.nombreProducto }} </a></h3>
@@ -418,7 +419,7 @@
  
 
 
-
+{% endblock content%}
 
   <!-- /////////////*start  Footeer*////////////////// -->
 
@@ -477,6 +478,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js "></script>
   <script src="https://kit.fontawesome.com/94d365e8cc.js " crossorigin="anonymous "></script>
   <script src="https://img1.wsimg.com/tcc/tcc_l.combined.1.0.6.min.js "></script>
+  
   <script src="{% static 'js/text.js' %} "></script>
 </body>
 

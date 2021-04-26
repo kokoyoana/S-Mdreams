@@ -61,7 +61,8 @@ class Categorias(ListView):
     def get_context_data(self,**kwargs):
         context=super(Categorias, self).get_context_data(**kwargs)
         idSer = self.kwargs.get('pk',None)
-        context['infopro'] = Categoria.objects.filter(categoria=idSer)
+        context['infopro'] = Categoria.objects.filter(id=idSer)
+        context['infopro'] = inicializar_productos()
         context['productos'] = Producto.objects.all()
         context['nuevos']= Producto.objects.filter(nuevos = True)[:4]
         context['algunos']= Producto.objects.filter(algunos = True)[:8]
@@ -82,6 +83,7 @@ class Articulos(TemplateView):
         idPro = self.kwargs.get('pk',None)
         context['infopro'] = Categoria.objects.filter(categoria=idPro)
         context['categorias']= Categoria.objects.all()
+        context['infopro'] = inicializar_productos()
         context['productos'] = Producto.objects.all()
         context['nuevos']= Producto.objects.filter(nuevos = True)[:4]
         context['algunos']= Producto.objects.filter(algunos = True)[:8]
@@ -100,7 +102,13 @@ class InfoProducto(DetailView):
         context=super(InfoProducto, self).get_context_data(**kwargs)
         idCur = self.kwargs.get('pk',None)
         context['infoproducto']= Producto.objects.get(pk = idCur)
-        context['cursos']= Producto.objects.all()
-
+        context['categorias']= Categoria.objects.all()
+        context['infopro'] = inicializar_productos()
+        context['productos'] = Producto.objects.all()
+        context['nuevos']= Producto.objects.filter(nuevos = True)[:4]
+        context['algunos']= Producto.objects.filter(algunos = True)[:8]
+        context['destacados']= Producto.objects.filter(destacados = True)[:4]
   
         return context
+
+       
