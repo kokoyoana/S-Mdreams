@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'widget_tweaks',
     'bootstrap4',
     'app',
+    'carro',
 ]
 
 MIDDLEWARE = [

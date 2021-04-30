@@ -24,40 +24,40 @@
                     <div class="cols">
                         <div class="left-col">
                             <div class="thumbs">
-                                <a class="thumb-image active" href="{{ infoproducto.imgPro2.url }}" data-index="0">
-                                    <span><img src="{{ infoproducto.imgPro2.url }}"
-                                            alt="{{ infoproducto.nombreProducto  }}"></span>
+                                <a class="thumb-image active" href="{{ infoproducto.imagen2.url }}" data-index="0">
+                                    <span><img src="{{ infoproducto.imagen2.url }}"
+                                            alt="{{ infoproducto.nombre }}"></span>
                                 </a>
                                 <a class="thumb-image"
-                                    href="{{ infoproducto.imgPro3.url }}"
+                                    href="{{ infoproducto.imagen3.url }}"
                                     data-index="1">
                                     <span><img
-                                            src="{{ infoproducto.imgPro3.url }}"
-                                            alt="{{ infoproducto.nombreProducto  }}"></span>
+                                            src="{{ infoproducto.imagen3.url }}"
+                                            alt="{{ infoproducto.nombre  }}"></span>
                                 </a>
                                 <a class="thumb-image"
-                                    href="{{ infoproducto.imgPro4.url }}"
+                                    href="{{ infoproducto.imagen1.url }}"
                                     data-index="2">
                                     <span><img
-                                            src="{{ infoproducto.imgPro4.url }}"
-                                            alt="{{ infoproducto.nombreProducto  }}"></span>
+                                            src="{{ infoproducto.imagen4.url }}"
+                                            alt="{{ infoproducto.nombre  }}"></span>
                                 </a>
                                 <a class="thumb-image"
-                                    href="{{ infoproducto.imgPro5.url }}"
+                                    href="{{ infoproducto.imagen5.url }}"
                                     data-index="2">
                                     <span><img
-                                            src="{{ infoproducto.imgPro5.url }}"
-                                            alt="{{ infoproducto.nombreProducto  }}"></span>
+                                            src="{{ infoproducto.imagen5.url }}"
+                                            alt="{{ infoproducto.nombre  }}"></span>
                                 </a>
                             </div>
                             <div class="big">
                                 <span id="big-image" class="img" quickbeam="image"
-                                    style="background-image: url('{{ infoproducto.imgPro1.url }}')"
-                                    data-src="{{ infoproducto.imgPro1.url }}"></span>
+                                    style="background-image: url('{{ infoproducto.imagen1.url }}')"
+                                    data-src="{{ infoproducto.imagen1.url }}"></span>
                                 <div id="banner-gallery" class="swipe">
                                     <div class="swipe-wrap">
                                         <div
-                                            style="background-image: url('{{ infoproducto.imgPro1.url }}')">
+                                            style="background-image: url('{{ infoproducto.imagen1.url }}')">
                                         </div>
                                       
                                      
@@ -67,7 +67,7 @@
                             </div>
                         </div>
                         <div class="right-col">
-                            <h1 itemprop="name">{{ infoproducto.nombreProducto  }}</h1>
+                            <h1 itemprop="name">{{ infoproducto.nombre  }}</h1>
                             <div itemprop="offers" itemscope itemtype="">
                                 <meta itemprop="priceCurrency" content="EUR">
                                 <link itemprop="availability" href="">
@@ -98,7 +98,7 @@
                                                 value="Blue" checked />
                                             <label for="swatch-1-blue" style="border-color: blue;">
                                                 <img class="crossed-out"
-                                                    src="{{ infoproducto.imgPro1.url }}" />
+                                                    src="{{ infoproducto.imagen1.url }}" />
                                                 <span style="background-color: blue;"></span>
                                             </label>
                                         </div>
@@ -108,7 +108,7 @@
                                                 value="Red" />
                                             <label for="swatch-1-red" style="border-color: red;">
                                                 <img class="crossed-out"
-                                                    src="{{ infoproducto.imgPro2.url }}" />
+                                                    src="{{ infoproducto.imagen2.url }}" />
                                                 <span style="background-color: red;"></span>
                                             </label>
                                         </div>
@@ -193,15 +193,15 @@
                         <a class="product-box" href="{% url 'app:infoproductos' producto.id %}">
                             <span class="img" >
                                 <span
-                                    style="background-image: url('{{ producto.imgPro1.url }}')"
+                                    style="background-image: url('{{ producto.imagen1.url }}')"
                                     class="i first"></span>
                                 <span class="i second"
-                                    style="background-image: url('{{ producto.imgPro2.url }}')"></span>
+                                    style="background-image: url('{{ producto.imagen2.url }}')"></span>
                             </span>
                             <span class="text">
                                 <strong></strong>
                                 <span>
-                                    {{ producto.nombreProducto }}
+                                    {{ producto.nombre}}
                                 </span>
  
                             </span>
