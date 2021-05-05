@@ -32,9 +32,13 @@ div.container.prueba{
 
 
 body{
-  
-  background-color: #F6F7F8;
-
+            font-family: "montserratlight", sans-serif;
+            background-color: #fff;
+            color: #16161a;
+            font-size: 81.25%;
+            line-height: 184.61538%;
+            overflow-x: hidden;
+            position: relative;
 }
 
 div .dropdown-toggle {
@@ -81,7 +85,10 @@ div .flayer{
 .Contacarrousel {
   padding-top: 100px;
 }
-
+.carousel-inner img{
+    width: 100%;
+    height: 100%;
+}
 
 
 /*---------------------FIN -----------*/
@@ -196,7 +203,7 @@ a{
 /*FOOTER START///////////////////*/
 .footer {
     padding: 50px 0 20px 0;
-    background-color: rgb(55, 55, 92);
+    background-color: rgb(6, 114, 90);
     color: #878c94;
 }
 .footer .title{
@@ -298,3 +305,44 @@ div.col-sm-3.Fpagos {
 }
 
 
+div.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 10rem;
+    padding: .5rem 0;
+    margin: .125rem 0 0;
+    font-size: 1rem;
+    color: #212529;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: .25rem;
+}
+
+div.dropdown-item{
+    display: block;
+    width: 100%;
+    padding: .25rem 1.5rem;
+    clear: both;
+    font-weight: 400;
+    color: #212529;
+    text-align: inherit;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+    font-size: 18px;
+}
+button.btn.productPage{
+  color:blanchedalmond;
+  background-color: #FF5377;
+}
+.fontboton{
+    color:blanchedalmond!important;
+
+}
