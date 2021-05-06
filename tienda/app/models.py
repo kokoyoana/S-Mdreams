@@ -23,6 +23,8 @@ class Producto(models.Model):
     destacados = models.BooleanField(default=False)
     nuevos = models.BooleanField(default=False)
     algunos = models.BooleanField(default=False)
+    portada = models.BooleanField(default=False)
+
 
 
 

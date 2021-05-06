@@ -44,6 +44,7 @@ class Home(TemplateView):
         context['destacados']= Producto.objects.filter(destacados = True)[:4]
         context['nuevos']= Producto.objects.filter(nuevos = True)[:4]
         context['algunos']= Producto.objects.filter(algunos = True)[:8]
+        context['portada']= Producto.objects.filter(portada = True)[:4]
 
         return context
 
@@ -67,6 +68,7 @@ class Categorias(ListView):
         context['nuevos']= Producto.objects.filter(nuevos = True)[:4]
         context['algunos']= Producto.objects.filter(algunos = True)[:8]
         context['destacados']= Producto.objects.filter(destacados = True)[:4]
+        context['portada']= Producto.objects.filter(portada = True)[:4]
 
 
         return context
@@ -88,6 +90,7 @@ class Articulos(TemplateView):
         context['nuevos']= Producto.objects.filter(nuevos = True)[:4]
         context['algunos']= Producto.objects.filter(algunos = True)[:8]
         context['destacados']= Producto.objects.filter(destacados = True)[:4]
+        context['portada']= Producto.objects.filter(portada = True)[:4]
 
 
         return context
@@ -108,6 +111,8 @@ class InfoProducto(DetailView):
         context['nuevos']= Producto.objects.filter(nuevos = True)[:4]
         context['algunos']= Producto.objects.filter(algunos = True)[:8]
         context['destacados']= Producto.objects.filter(destacados = True)[:4]
+        context['portada']= Producto.objects.filter(portada = True)[:4]
+
   
         return context
 

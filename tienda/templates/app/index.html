@@ -104,17 +104,32 @@
   </ul>
   
   <!-- The slideshow -->
+  
   <div class="carousel-inner Contacarrousel">
-    <div class="carousel-item active">
-      <img src="{% static 'img/canastilla.jpg' %}" alt="Los Angeles" width="1100" height="500">
+      {% for producto in portada %}
+         
+
+
+  <div class="carousel-item
+    {% if forloop.first %}
+      active
+    {% endif %}
+  ">
+    <img class="d-block w-100" src="{{ producto.imagen1.url }}" alt="producto">
+  </div>  
+  {% endfor %}
+   
+
     </div>
-    <div class="carousel-item">
-      <img src="{% static 'img/vestidos.jpg' %}" alt="Chicago" width="1100" height="500">
-    </div>
-    <div class="carousel-item">
+   
+
+ 
+     
+<!--     <div class="carousel-item">
       <img src="{% static 'img/pro5.png' %}" alt="New York" width="1100" height="500">
-    </div>
+    </div>  -->
   </div>
+   
   
   <!-- Left and right controls -->
   <a class="carousel-control-prev" href="#demo" data-slide="prev">
