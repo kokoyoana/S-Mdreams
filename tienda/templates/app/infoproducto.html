@@ -1,7 +1,7 @@
-{% extends 'app/index.html' %} {% load static %} {% load bootstrap4 %} 
+{% extends 'app/index.html' %} {% load static %} {% load bootstrap4 %}
 
 
-{% load static %} {% load bootstrap4 %} 
+{% load static %} {% load bootstrap4 %}
 
 {% block content%}
 
@@ -28,25 +28,16 @@
                                     <span><img src="{{ infoproducto.imagen2.url }}"
                                             alt="{{ infoproducto.nombre }}"></span>
                                 </a>
-                                <a class="thumb-image"
-                                    href="{{ infoproducto.imagen3.url }}"
-                                    data-index="1">
-                                    <span><img
-                                            src="{{ infoproducto.imagen3.url }}"
+                                <a class="thumb-image" href="{{ infoproducto.imagen3.url }}" data-index="1">
+                                    <span><img src="{{ infoproducto.imagen3.url }}"
                                             alt="{{ infoproducto.nombre  }}"></span>
                                 </a>
-                                <a class="thumb-image"
-                                    href="{{ infoproducto.imagen1.url }}"
-                                    data-index="2">
-                                    <span><img
-                                            src="{{ infoproducto.imagen4.url }}"
+                                <a class="thumb-image" href="{{ infoproducto.imagen1.url }}" data-index="2">
+                                    <span><img src="{{ infoproducto.imagen4.url }}"
                                             alt="{{ infoproducto.nombre  }}"></span>
                                 </a>
-                                <a class="thumb-image"
-                                    href="{{ infoproducto.imagen5.url }}"
-                                    data-index="2">
-                                    <span><img
-                                            src="{{ infoproducto.imagen5.url }}"
+                                <a class="thumb-image" href="{{ infoproducto.imagen5.url }}" data-index="2">
+                                    <span><img src="{{ infoproducto.imagen5.url }}"
                                             alt="{{ infoproducto.nombre  }}"></span>
                                 </a>
                             </div>
@@ -56,14 +47,13 @@
                                     data-src="{{ infoproducto.imagen1.url }}"></span>
                                 <div id="banner-gallery" class="swipe">
                                     <div class="swipe-wrap">
-                                        <div
-                                            style="background-image: url('{{ infoproducto.imagen1.url }}')">
+                                        <div style="background-image: url('{{ infoproducto.imagen1.url }}')">
                                         </div>
-                                      
-                                     
+
+
                                     </div>
                                 </div>
-                                
+
                             </div>
                         </div>
                         <div class="right-col">
@@ -72,23 +62,24 @@
                                 <meta itemprop="priceCurrency" content="EUR">
                                 <link itemprop="availability" href="">
                                 <div class="price-shipping">
-                                    <div class="price" id="price-preview" quickbeam="price" quickbeam-price="{{ infoproducto.nombreProducto  }}">
-                                    {{ infoproducto.precio  }}$
+                                    <div class="price" id="price-preview" quickbeam="price"
+                                        quickbeam-price="{{ infoproducto.nombreProducto  }}">
+                                        {{ infoproducto.precio  }}$
                                     </div>
 
                                 </div>
                                 <div class="swatches">
                                     <div class="swatch clearfix" data-option-index="0">
                                         <div class="header">Tela</div>
-                                         <select name="tela" id="tela">
-                                             <option value="tela">wash</option>
-                                                                                                           <option value="telea">wash</option>
-                            <option value="tela">wash</option>
-                                             <option value="tela">wash</option>
+                                        <select name="tela" id="tela">
+                                            <option value="tela">wash</option>
+                                            <option value="telea">wash</option>
+                                            <option value="tela">wash</option>
+                                            <option value="tela">wash</option>
 
-                                         </select>
-                                        
-                                  
+                                        </select>
+
+
                                     </div>
                                     <div class="swatch clearfix" data-option-index="1">
                                         <div class="header">Personalización</div>
@@ -97,8 +88,7 @@
                                             <input quickbeam="color" id="swatch-1-blue" type="radio" name="option-1"
                                                 value="Blue" checked />
                                             <label for="swatch-1-blue" style="border-color: blue;">
-                                                <img class="crossed-out"
-                                                    src="{{ infoproducto.imagen1.url }}" />
+                                                <img class="crossed-out" src="{{ infoproducto.imagen1.url }}" />
                                                 <span style="background-color: blue;"></span>
                                             </label>
                                         </div>
@@ -107,14 +97,13 @@
                                             <input quickbeam="color" id="swatch-1-red" type="radio" name="option-1"
                                                 value="Red" />
                                             <label for="swatch-1-red" style="border-color: red;">
-                                                <img class="crossed-out"
-                                                    src="{{ infoproducto.imagen2.url }}" />
+                                                <img class="crossed-out" src="{{ infoproducto.imagen2.url }}" />
                                                 <span style="background-color: red;"></span>
                                             </label>
                                         </div>
-                                     
+
                                     </div>
-                                 
+
                                 </div>
                                 <!-- <form method="post" enctype="multipart/form-data" id="AddToCartForm"> -->
                                 <form id="AddToCartForm">
@@ -171,29 +160,28 @@
                                     </div>
                                     <div class="tab-slides">
                                         <div id="tab-slide-1" itemprop="description" class="slide active">
-                              {{ infoproducto.descripcion }}
+                                            {{ infoproducto.descripcion }}
                                         </div>
-                                      
+
                                     </div>
                                 </div>
-                            
+
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <aside class="related">
-                
+
                 <div class="_cont">
-                     
+
                     <h2>Quizás te gustaria</h2>
                     <div class="collection-list cols-4" id="collection-list" data-products-per-page="4">
-                    {% for producto in destacados %}
-            
+                        {% for producto in destacados %}
+
                         <a class="product-box" href="{% url 'app:infoproductos' producto.id %}">
-                            <span class="img" >
-                                <span
-                                    style="background-image: url('{{ producto.imagen1.url }}')"
+                            <span class="img">
+                                <span style="background-image: url('{{ producto.imagen1.url }}')"
                                     class="i first"></span>
                                 <span class="i second"
                                     style="background-image: url('{{ producto.imagen2.url }}')"></span>
@@ -203,11 +191,11 @@
                                 <span>
                                     {{ producto.nombre}}
                                 </span>
- 
+
                             </span>
                         </a>
-                    {% endfor %}
-  <!--                       <a class="product-box">
+                        {% endfor %}
+                        <!--                       <a class="product-box">
                             <span class="img">
                                 <span
                                     style="background-image: url('//cdn.shopify.com/s/files/1/1047/6452/products/tricko2_357767df-d7ff-4b58-b705-edde76bb32b7_grande.jpg?v=1447530150')"
@@ -418,19 +406,19 @@
                                 </div>
                             </span>
                         </a> -->
-                   
-                    </div>
-                  
 
-                   
+                    </div>
+
+
+
 
                 </div>
-               
+
             </aside>
         </div>
 
     </section>
-   
+
 
     <!-- Quickbeam cart-->
 
@@ -450,5 +438,5 @@
     </script>
     <script src='//raw.githubusercontent.com/greenwoodents/quickbeam.js/master/dist/quickbeam.min.js'></script>
     <script src='//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js'></script>
-  
-{% endblock content%}
+
+    {% endblock content%}

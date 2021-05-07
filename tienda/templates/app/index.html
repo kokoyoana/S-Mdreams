@@ -106,7 +106,7 @@
   <!-- The slideshow -->
   
   <div class="carousel-inner Contacarrousel">
-      {% for producto in portada %}
+      {% for producto in destacados %}
          
 
 
@@ -114,13 +114,19 @@
     {% if forloop.first %}
       active
     {% endif %}
-  ">
-    <img class="d-block w-100" src="{{ producto.imagen1.url }}" alt="producto">
+   ">
+
+  <a class="acarrou" href="{% url 'app:infoproductos' producto.id %}"><img class="w-100 img-responsive" src="{{ producto.imagen1.url }}" alt="producto"></a>
+  <div class="carousel-caption">
+                <h3> {{ producto.nombre }} </h3>
+            </div>
   </div>  
   {% endfor %}
    
 
     </div>
+   </div> 
+  
    
 
  
@@ -166,7 +172,7 @@
       <div class="col-md-3 col-6">
 
         <a href="{% url 'app:infoproductos' producto.id %}"><img class="img-fluid img-portfolio img-hover mb-3"
-            src="{{ producto.imagen1.url }}">
+            src="{{ producto.imagen1.url }}"></a>
           <hr>
           <div class="caption">
             <h3><a class="caption" href="{% url 'app:infoproductos' producto.id %}"> {{ producto.nombre }} </a>
@@ -504,8 +510,8 @@
     <div class="col-sm">
          <h4 class="title">Privacidad</h4>
           <div class="category">
-            <a href="#">Aviso legal</a>
-            <a href="#">Cookies</a>
+            <a style="background-color: beige;" href="#">Aviso legal</a>
+            <a  style="background-color: beige;" href="#">Cookies</a>
 
           </div>
     </div>
