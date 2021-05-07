@@ -215,6 +215,25 @@ font-family: "montserratregular", sans-serif;
 }
 
 
+.carousel-control-next{
+  height: 470px;
+  margin-top: 300px;
+}
+.carousel-control-prev{
+  height: 470px;
+  margin-top: 300px;
+}
+span.carousel-control-next-icon{
+color:#ec0a15;
+background-color: #ec0a15;
+}
+span.carousel-control-prev-icon{
+color:#ec0a15;
+background-color: #ec0a15;
+}
+
+
+
 
 
 
