@@ -68,10 +68,14 @@
                                     </div>
 
                                 </div>
+                                <form action="/login/" method="post" id="AddToCartForm"  >
+
                                 <div class="swatches">
                                     <div class="swatch clearfix" data-option-index="0">
-                                        <div class="header">Tela</div>
+
+                                <div class="header mr-3">Tela</div>
                                         <select name="tela" id="tela">
+                                            
                                             <option value="tela">wash</option>
                                             <option value="telea">wash</option>
                                             <option value="tela">wash</option>
@@ -85,19 +89,18 @@
                                         <div class="header">Personalización</div>
                                         <div data-value="Blue" class="swatch-element color blue available">
                                             <div class="tooltip">Si</div>
-                                            <input quickbeam="color" id="swatch-1-blue" type="radio" name="option-1"
-                                                value="Blue" checked />
+                                            <input quickbeam="color" id="si" type="radio" name="option-1" value="Blue"
+                                                checked />
                                             <label for="swatch-1-blue" style="border-color: blue;">
-                                                <img class="crossed-out" src="{{ infoproducto.imagen1.url }}" />
+                                                <img class="crossed-out" src="{{ infoproducto.tela }}" />
                                                 <span style="background-color: blue;"></span>
                                             </label>
                                         </div>
                                         <div data-value="Red" class="swatch-element color red available">
                                             <div class="tooltip">No</div>
-                                            <input quickbeam="color" id="swatch-1-red" type="radio" name="option-1"
-                                                value="Red" />
+                                            <input quickbeam="color" id="no" type="radio" name="option-1" value="Red" />
                                             <label for="swatch-1-red" style="border-color: red;">
-                                                <img class="crossed-out" src="{{ infoproducto.imagen2.url }}" />
+                                                <img class="crossed-out" src="{{ infoproducto.tela }}" />
                                                 <span style="background-color: red;"></span>
                                             </label>
                                         </div>
@@ -106,37 +109,7 @@
 
                                 </div>
                                 <!-- <form method="post" enctype="multipart/form-data" id="AddToCartForm"> -->
-                                <form id="AddToCartForm">
-                                    <!-- <select name="id" id="productSelect" quickbeam="product"
-                                        class="product-single__variants">
-                                        <option selected="selected" data-sku="" value="7924994501">
-                                            M / Blue - $800.00 USD
-                                        </option>
-                                        <option data-sku="" value="7924995077">
-                                            M / Red - $850.00 USD
-                                        </option>
-                                        <option data-sku="" value="7924994437">
-                                            L / Blue - $850.00 USD
-                                        </option>
-                                        <option data-sku="" value="7924994693">
-                                            L / Yellow - $850.00 USD
-                                        </option>
-                                        <option data-sku="" value="7924995013">
-                                            L / Red - $850.00 USD
-                                        </option>
-                                        <option data-sku="" value="7924994373">
-                                            XL / Blue - $900.00 USD
-                                        </option>
-                                        <option data-sku="" value="7924994629">
-                                            XL / Yellow - $850.00 USD
-                                        </option>
-                                        <option data-sku="" value="7924830021">
-                                            XXL / Blue - $950.00 USD
-                                        </option>
-                                        <option data-sku="" value="7924994885">
-                                            XXL / Red - $850.00 USD
-                                        </option>
-                                    </select> -->
+                          
                                     <div class="btn-and-quantity-wrap">
                                         <div class="btn-and-quantity">
                                             <div class="spinner">
