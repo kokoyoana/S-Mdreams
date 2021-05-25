@@ -1,0 +1,51 @@
+{% extends "app/layouts/index.html" %}
+
+{% block content %}
+    <h1>Carrito</h1>
+    {% if carro %}
+    <div class="table-responsive">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th class="text-center">Precio unitario</th>
+                    <th class="text-center">Cantidad</th>
+                    <th class="text-center">Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in carro %}
+                {% with producto=item.producto %}
+                <tr>
+                    <td>
+                        <div class="media">
+                            <img src="{{ producto.imagen1.url }}" alt="{{ producto.nombre }}" class="img-fluid mr-3" width="100">
+                            <div class="media-body">
+                                <h5 class="mt-0">{{ producto.nombre }}</h5>
+                                <p>...</p>
+                                <p><a href="{% url 'app:carrito_eliminar' producto.id %}" class="btn btn-sm btn-outline-danger"><i class="fa fa-trash fa-fw"></i>Eliminar</a></p>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="text-center">{{ item.precio }}€</td>
+                    <td class="text-center">{{ item.cantidad }}</td>
+                    <td class="text-center">{{ item.total_precio }}€</td>
+                </tr>
+                {% endwith %}
+                {% endfor %}
+                <tr>
+                    <td class="text-right" colspan="3"><strong class="text-uppercase">Total</strong></td>
+                    <td class="text-center"><strong>{{ carro.get_total_precio }}€</strong></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <p class="text-center">
+        <a href="#" class="btn btn-link">Seguir comprando</a>
+        <a href="#" class="btn btn-link">Finalizar pedido</a>
+    </p>
+    {% else %}
+    <p>El carrito esta vacío!</p>
+    <p class="mb-0"><a href="{% url 'app:portada' %}">Ir al inicio</a></p>
+    {% endif %}
+{% endblock %}

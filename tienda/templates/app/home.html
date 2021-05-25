@@ -1,0 +1,7 @@
+{% extends "app/layouts/index.html" %}
+
+{% block content %}
+    {% include "app/partials/products.html" with titulo="Productos destacados" productos=destacados %}
+    {% include "app/partials/products.html" with titulo="Productos nuevos" productos=nuevos %}
+    {% include "app/partials/products.html" with titulo="Algunos de nuestros productos" productos=algunos %}
+{% endblock %}

@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@300&display=swap');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #cfeae8;
+  color: #16161a;
+}
+
+
+header {
+  border-bottom: 10px solid #ff9398;
+}
+
+
+main {
+  padding: 2rem 0;
+}
+
+main .products {
+  border-bottom: 5px solid #ff9398;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+main .products h2 {
+  margin: 2rem 0;
+}
+
+
+footer {
+  background-color: #06725a;
+  color: black;
+  padding: 1.5rem;
+}
+
+footer h4 {
+  color: white;
+}
+
+footer a {
+  color: black;
+}
+
+
+.products .btn {
+  border: transparent;
+  background-color: #ff5377;
+  color: #ffebcd;
+}
+
+.products h2 {
+  font-family: 'Lobster', cursive;
+  font-size: 2.5rem;
+  color: #878c94;
+}
+
+.products h3 a {
+  color: black;
+}
+
+.products .price {
+  font-size: 2rem;
+}

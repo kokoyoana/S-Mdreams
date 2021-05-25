@@ -31,7 +31,6 @@ div.container.prueba{
 
 
 
-
 body{
             font-family: "montserratlight", sans-serif;
             background-color: #fff;
@@ -197,14 +196,12 @@ body{
 }
 .parrafos{
 font-size: 45px;
-color:#000000;
+color: #878c94;
 font-family: 'Lobster', cursive;
 }
 .price-mob{
 font-size: 25px;
-
 }
-
 .fixed-top{
 position:2;
   
@@ -215,13 +212,6 @@ color: black !important;
 text-decoration: none;
 background-color: transparent;
 font-family: "montserratregular", sans-serif;
-}
-a.caption{
-  color:rgb(94, 87, 87) !important;
-}
-.price-mob{
-  color:rgb(94, 87, 87) !important;
-
 }
 
 
@@ -254,7 +244,7 @@ background-color: #ec0a15;
 /*FOOTER START///////////////////*/
 .footer {
     padding: 50px 0 20px 0;
-    background-color: #33ada3;
+    background-color: rgb(6, 114, 90);
     color: #878c94;
 }
 .footer .title{
@@ -397,12 +387,3 @@ background-color: #FF5377;
   color:blanchedalmond!important;
 
 }
-
-div.container.prueba{
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 20px;
-    margin-right: auto;
-    margin-left: auto;
-}
-

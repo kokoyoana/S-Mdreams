@@ -1,0 +1,16 @@
+{% extends "app/layouts/master.html" %}
+
+{% block wrapper %}
+    <header>
+        {% include "app/partials/header.html" %}
+    </header>
+    <main>
+        <div class="container">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </main>
+    <footer>
+        {% include "app/partials/footer.html" %}
+    </footer>
+{% endblock %}
