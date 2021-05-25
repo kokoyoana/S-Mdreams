@@ -398,3 +398,11 @@ background-color: #FF5377;
 
 }
 
+div.container.prueba{
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 20px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
