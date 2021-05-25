@@ -31,6 +31,7 @@ div.container.prueba{
 
 
 
+
 body{
             font-family: "montserratlight", sans-serif;
             background-color: #fff;
@@ -196,12 +197,14 @@ body{
 }
 .parrafos{
 font-size: 45px;
-color: #878c94;
+color:#000000;
 font-family: 'Lobster', cursive;
 }
 .price-mob{
 font-size: 25px;
+
 }
+
 .fixed-top{
 position:2;
   
@@ -387,3 +390,4 @@ background-color: #FF5377;
   color:blanchedalmond!important;
 
 }
+

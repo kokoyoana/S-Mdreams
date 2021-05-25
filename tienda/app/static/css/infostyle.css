@@ -749,7 +749,7 @@
         body {
             font-family: "montserratlight", sans-serif;
             background-color: #fff;
-            color: #16161a;
+            color: #fff;
             font-size: 81.25%;
             line-height: 184.61538%;
             overflow-x: hidden;
@@ -1340,6 +1340,7 @@
             display: block;
             clear: both;
         }
+     
 
         .product-detail .left-col .thumbs {
             width: 15.25424%;
@@ -2134,6 +2135,7 @@
         #sign-in-popup #close-sign-in:hover:before {
             opacity: 0;
         }
+    
 
 
       
@@ -3117,7 +3119,7 @@ nav.navbar{
 }
 #navbarSupportedContent {
     margin-right: 0;
-    margin-left: 305px;
+    margin-left: 247px;
 }
 
 .navbar.ml-auto, .mx-auto {

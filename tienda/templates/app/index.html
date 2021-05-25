@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
-<body style="background-color: #CFEAE8;;">
+<body style="background-color: #FFF;">
 
   <header class="header">
     <nav class="navbar navbar-expand-lg py-3">
@@ -43,7 +43,9 @@
             </div>
             {% endfor %}
             <i class="fas fa-cart-arrow-down  fa-2x">{{importe_total_carro}}</i>
+            
           </ul>
+          
         </div>
       </div>
     </nav>
@@ -169,7 +171,7 @@
 
     <div class="row">
       {% for producto in destacados %}
-      <div class="col-md-3 col-6">
+      <div class="col-md-3 col-6 col-xs-12">
 
         <a href="{% url 'app:infoproductos' producto.id %}"><img class="img-fluid img-portfolio img-hover mb-3"
             src="{{ producto.imagen1.url }}"></a>
@@ -503,7 +505,7 @@
         <h4 class="title">Contactanos</h4>
           <span class="acount-icon">
             <a href="#"><i class="fas fa-phone"></i></i> 644497593</a>
-            <a href="#"><i class="fab fa-whatsapp"></i> Whatsapp</i></a>
+            <a href="https://wa.me/644497593"><i class="fab fa-whatsapp"></i> Whatsapp</i></a>
             <a href="#"><i class="fas fa-envelope-square"></i></i> SMdreams@gmail.com</a>
           </span>
     </div>
@@ -512,6 +514,9 @@
           <div class="category">
             <a style="background-color: beige;" href="#">Aviso legal</a>
             <a  style="background-color: beige;" href="#">Cookies</a>
+             <a style="background-color: beige;" href="#">Condiciones Compra</a>
+            <a  style="background-color: beige;" href="#">Condiciones Venta</a>
+
 
           </div>
     </div>
