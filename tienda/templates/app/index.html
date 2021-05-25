@@ -300,7 +300,7 @@
             src="{{ producto.imagen1.url }}">
           <hr>
           <div class="caption nombre">
-            <h3><a class="Titulo" href="{% url 'app:infoproductos' producto.id %}"> {{ producto.nombre }} </a>
+            <h3><a class="caption" href="{% url 'app:infoproductos' producto.id %}"> {{ producto.nombre }} </a>
             </h3>
             <div class="price-mob mb-3">
               {{ producto.precio }}€
@@ -467,7 +467,7 @@
             src="{{ producto.imagen1.url }}">
           <hr>
           <div class="caption nombre">
-            <h3><a href="{% url 'app:infoproductos' producto.id %}"> {{ producto.nombre }} </a></h3>
+            <h3><a class="caption" href="{% url 'app:infoproductos' producto.id %}"> {{ producto.nombre }} </a></h3>
             <div class="price-mob mb-3">
               {{ producto.precio }}€
             </div>
@@ -510,24 +510,22 @@
           </span>
     </div>
     <div class="col-sm">
+        <h4 class="title">Compra Seguro</h4>
+          <div class="category">
+            <a style="background-color: beige;" href="#">Condiciones de Compra</a>
+            <a  style="background-color: beige;" href="#">Condiciones de Envio</a>
+           
+
+          </div>
+    </div>
+        <div class="col-sm">
          <h4 class="title">Privacidad</h4>
           <div class="category">
             <a style="background-color: beige;" href="#">Aviso legal</a>
             <a  style="background-color: beige;" href="#">Cookies</a>
-             <a style="background-color: beige;" href="#">Condiciones Compra</a>
-            <a  style="background-color: beige;" href="#">Condiciones Venta</a>
-
+           
 
           </div>
-    </div>
-    <div class="col-sm">
-          <h4 class="title">Payment</h4>
-          <p>Compra con seguridad</p>
-          <ul class="payment">
-            <li><a href="#"><i class="fa fa-credit-card" aria-hidden="true"></i></a></li>
-            <li><a href="#"><i class="fa fa-paypal" aria-hidden="true"></i></a></li>
-            <li><a href="#"><i class="fa fa-cc-visa" aria-hidden="true"></i></a></li>
-          </ul>
     </div>
   </div>
 </div>

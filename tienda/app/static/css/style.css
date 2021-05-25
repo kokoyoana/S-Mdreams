@@ -216,6 +216,13 @@ text-decoration: none;
 background-color: transparent;
 font-family: "montserratregular", sans-serif;
 }
+a.caption{
+  color:rgb(94, 87, 87) !important;
+}
+.price-mob{
+  color:rgb(94, 87, 87) !important;
+
+}
 
 
 .carousel-control-next{
@@ -247,7 +254,7 @@ background-color: #ec0a15;
 /*FOOTER START///////////////////*/
 .footer {
     padding: 50px 0 20px 0;
-    background-color: rgb(6, 114, 90);
+    background-color: #33ada3;
     color: #878c94;
 }
 .footer .title{
