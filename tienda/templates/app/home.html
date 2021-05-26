@@ -1,6 +1,24 @@
 {% extends "app/layouts/index.html" %}
 
 {% block content %}
+    <div id="carousel" class="carousel slide carousel-fade carousel-home" data-ride="carousel">
+        <div class="carousel-inner">
+            {% for producto in destacados %}
+            <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                <img src="{{ producto.imagen1.url }}" class="d-block w-100" alt="{{ producto.nombre }}" height="500">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>{{ producto.nombre }}</h5>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <a href="#carousel" class="carousel-control-prev" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a href="#carousel" class="carousel-control-next" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+    </div>
     {% include "app/partials/products.html" with titulo="Productos destacados" productos=destacados %}
     {% include "app/partials/products.html" with titulo="Productos nuevos" productos=nuevos %}
     {% include "app/partials/products.html" with titulo="Algunos de nuestros productos" productos=algunos %}
