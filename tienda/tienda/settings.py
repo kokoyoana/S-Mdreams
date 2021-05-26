@@ -53,6 +53,8 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+APP_NAME = 'S&MDreams'
+
 CART_SESSION_ID	= 'carro'
 
 ROOT_URLCONF = 'tienda.urls'

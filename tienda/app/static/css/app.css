@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@300&family=Euphoria+Script&display=swap');
 
 body {
   font-family: 'Montserrat', sans-serif;
@@ -8,9 +8,40 @@ body {
 
 
 header {
+  background: url('/static/img/bg-header.png') center top repeat-x;
   border-bottom: 10px solid #ff9398;
+  padding-bottom: .5rem;
+  padding-top: .5rem;
 }
+header .container { display: flex; }
+header .logo a {
+  background-image: url('/static/img/logo.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 170px 170px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 170px;
+  width: 170px;
+  transition: 250ms all ease-out;
+}
+header .logo a span { display: none; }
 
+header .menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+header .menu .slogan {
+  color: #878c94;
+  font-family: 'Euphoria Script', cursive;
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  text-align: center;
+}
 
 main {
   padding: 2rem 0;
@@ -25,7 +56,6 @@ main .products {
 main .products h2 {
   margin: 2rem 0;
 }
-
 
 
 footer {
@@ -64,10 +94,9 @@ footer a {
   font-size: 2rem;
 }
 
-
-/*//Para que todas las imagenes sean del mismo tamaño */
-div .img-fluid {
-    max-width: 100%;
-    width: 314.750px;
-    height: 314.750px;
+/* Para que todas las imagenes sean del mismo tamaño */
+.products .img-fluid {
+  max-width: 100%;
+  width: 314.750px;
+  height: 314.750px;
 }

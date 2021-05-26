@@ -1,29 +1,36 @@
-<nav class="navbar navbar-expand-lg">
-    <div class="container">
-        <div class="collapse navbar-collapse">
-            <ul class="navbar-nav mx-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'app:portada' %}"><i class="fa fa-home"></i> Inicio</a>
-                </li>
-                {% if menu.items %}
-                    {% for categoria, productos in menu.items %}
-                    <li class="nav-item {% if productos %}dropdown{% endif %}">
-                        <a class="nav-link {% if productos %}dropdown-toggle{% endif %}" href="#" {% if productos %}data-toggle="dropdown"{% endif %}>{{ categoria.nombre }}</a>
-                        {% if productos %}
-                        <ul class="dropdown-menu">
-                            {% for producto in productos %}
-                                <li><a class="dropdown-item" href="{% url 'app:producto' producto.id %}">{{ producto.nombre }}</a></li>
-                            {% endfor %}
-                        </ul>
-                        {% endif %}
+<div class="container">
+    <div class="logo">
+        <a href="{% url 'app:portada' %}"><span>{{ site_name }}</span></a>
+    </div>
+    <div class="menu">
+        <nav class="navbar navbar-expand-lg">
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'app:portada' %}"><i class="fa fa-home"></i> Inicio</a>
                     </li>
-                    {% endfor %}
-                {% endif %}
-                <li class="nav-item">
-                    <a class="btn btn-primary" href="{% url 'app:carrito' %}"><i class="fa fa-shopping-cart fa-fw"></i>{% if total_productos %} {{ total_productos }}{% endif %}</a>
-                </li>
-                <!-- <li><i class="fas fa-cart-arrow-down fa-2x">{{ importe_total_carro }}</i></li> -->
-            </ul>
+                    {% if menu.items %}
+                        {% for categoria, productos in menu.items %}
+                        <li class="nav-item {% if productos %}dropdown{% endif %}">
+                            <a class="nav-link {% if productos %}dropdown-toggle{% endif %}" href="#" {% if productos %}data-toggle="dropdown"{% endif %}>{{ categoria.nombre }}</a>
+                            {% if productos %}
+                            <ul class="dropdown-menu">
+                                {% for producto in productos %}
+                                    <li><a class="dropdown-item" href="{% url 'app:producto' producto.id %}">{{ producto.nombre }}</a></li>
+                                {% endfor %}
+                            </ul>
+                            {% endif %}
+                        </li>
+                        {% endfor %}
+                    {% endif %}
+                    <li class="nav-item">
+                        <a class="btn btn-primary" href="{% url 'app:carrito' %}"><i class="fa fa-shopping-cart fa-fw"></i>{% if total_productos %} {{ total_productos }}{% endif %}</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="slogan">
+            El taller de los sueños<br>todo para tu bebé y para tí
         </div>
     </div>
-</nav>
+</div>
