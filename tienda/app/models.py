@@ -8,6 +8,13 @@ class Categoria(models.Model):
     def __str__(self):
         return str(self.nombre)
 
+class Tela(models.Model):
+    nombre = models.TextField(null=True)
+
+    def __str__(self):
+        return str(self.nombre)
+
+
 
 class Producto(models.Model):
     nombre = models.TextField(null=True)
@@ -18,6 +25,7 @@ class Producto(models.Model):
     imagen4 = models.ImageField(upload_to='static/img')
     imagen5 = models.ImageField(upload_to='static/img')
     categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE, max_length=80, null=True)
+    nombreTela = models.ManyToManyField(Tela)
     descripcion = models.TextField(max_length=10000, null=True)
     destacados = models.BooleanField(default=False)
     nuevos = models.BooleanField(default=False)
@@ -26,3 +34,4 @@ class Producto(models.Model):
 
     def __str__(self):
         return str(self.nombre)
+
