@@ -101,3 +101,30 @@ footer a {
   width: 314.750px;
   height: 314.750px;
 }
+
+.carousel-gallery .carousel-indicators {
+  position: relative;
+  bottom: 0;
+  margin: 10px 0 0;
+}
+.carousel-gallery .carousel-indicators li {
+  text-indent: inherit;
+  width: 100px;
+  height: 100px;
+}
+.carousel-gallery .carousel-indicators li img {
+  border: 2px solid #e0dfd7;
+  padding: 1px;
+  height: 100px;
+  width: 100px;
+}
+
+.product h2 {
+  font-weight: bold;
+}
+.product .price {
+  color: #086fcf;
+  font-size: 3rem;
+}
+.product .btn-primary { margin-bottom: 1rem; }
+.product .tab-content { margin-top: 1rem; }
