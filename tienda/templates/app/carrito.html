@@ -28,7 +28,14 @@
                         </div>
                     </td>
                     <td class="text-center">{{ item.precio }}€</td>
-                    <td class="text-center">{{ item.cantidad }}</td>
+                    <td class="text-center">
+                        <form action="{% url 'app:carrito_actualizar' producto.id %}" method="post">
+                            {% csrf_token %}
+                            {{ item.form.cantidad }}
+                            {{ item.form.actualizar }}
+                            <button type="submit" class="btn btn-sm btn-success"><i class="fa fa-refresh fa-fw"></i> Actualizar</button>
+                        </form>
+                    </td>
                     <td class="text-center">{{ item.total_precio }}€</td>
                 </tr>
                 {% endwith %}
@@ -41,7 +48,7 @@
         </table>
     </div>
     <p class="text-center">
-        <a href="#" class="btn btn-link">Seguir comprando</a>
+        <a href="{% url 'app:portada' %}" class="btn btn-link">Seguir comprando</a>
         <a href="#" class="btn btn-link">Finalizar pedido</a>
     </p>
     {% else %}

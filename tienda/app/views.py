@@ -1,4 +1,5 @@
 from django.shortcuts import redirect, render, get_object_or_404
+from django.views.decorators.http import require_POST
 from django.views.generic import *
 
 # from django.contrib.contenttypes.models import ContentType
@@ -14,6 +15,7 @@ from django.views.generic import *
 
 from .models import *
 from .carro import Carro
+from .forms import AgregarProductoForm
 
 class Portada(TemplateView):
     template_name = 'app/home.html'
@@ -26,7 +28,6 @@ class Portada(TemplateView):
         # context['portada'] = Producto.objects.filter(portada=True)[:4]
         return context
 
-
 class InfoProducto(DetailView):
     template_name = 'app/producto.html'
     model = Producto
@@ -38,24 +39,34 @@ class InfoProducto(DetailView):
         context['producto'] = Producto.objects.get(id=idProducto)
         return context
 
-
 class Carrito(TemplateView):
     template_name = 'app/carrito.html'
 
     def get_context_data(self, **kwargs):
         carro = Carro(self.request)
+        for item in carro:
+            item['form'] = AgregarProductoForm(initial={'cantidad': item['cantidad'], 'actualizar': True})
 
         context = super(Carrito, self).get_context_data(**kwargs)
         context['carro'] = carro
         return context
 
-
+@require_POST
 def carrito_agregar(request, pk):
     carro = Carro(request)
     producto = get_object_or_404(Producto, id=pk)
     carro.add(producto=producto)
     return redirect('app:carrito')
 
+@require_POST
+def carrito_actualizar(request, pk):
+    carro = Carro(request)
+    producto = get_object_or_404(Producto, id=pk)
+    form = AgregarProductoForm(request.POST)
+    if form.is_valid():
+        cd = form.cleaned_data
+        carro.add(producto=producto, cantidad=cd['cantidad'], actualizar_cantidad=cd['actualizar'])
+    return redirect('app:carrito')
 
 def carrito_eliminar(request, pk):
     carro = Carro(request)

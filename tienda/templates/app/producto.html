@@ -34,7 +34,10 @@
             <div class="product">
                 <h2>{{ producto.nombre }}</h2>
                 <p><span class="price">{{ producto.precio }}€</span></p>
-                <p><a href="{% url 'app:carrito_agregar' producto.id %}" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Añadir al carrito</a></p>
+                <form action="{% url 'app:carrito_agregar' producto.id %}" method="post">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Añadir al carrito</button>
+                </form>
                 <ul class="nav nav-tabs">
                     <li class="nav-item" role="presentation">
                         <a class="nav-link active" data-toggle="tab" href="#info">Info</a>
