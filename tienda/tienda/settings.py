@@ -37,11 +37,23 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
+
     'widget_tweaks',
     'bootstrap4',
     'app',
     'carro',
+    'allauth', 	 # nueva linea
+    'allauth.account',  	# nueva linea
+    'allauth.socialaccount',    	# nueva linea
+    'crispy_forms' , 
 ]
+
+SITE_ID = 1
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+ACCOUNT_EMAIL_VERIFICATION = 'none'
+ACCOUNT_LOGOUT_REDIRECT_URL = '/accounts/login/'
+LOGIN_REDIRECT_URL = '/carrito'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -90,6 +102,10 @@ DATABASES = {
     }
 }
 
+AUTHENTICATION_BACKENDS = (
+        'django.contrib.auth.backends.ModelBackend',
+        'allauth.account.auth_backends.AuthenticationBackend',
+    )
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators

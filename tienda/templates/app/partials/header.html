@@ -4,7 +4,10 @@
     </div>
     <div class="menu">
         <nav class="navbar navbar-expand-lg">
-            <div class="collapse navbar-collapse">
+                <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+          class="navbar-toggler navbar-toggler-right" style="color:#FF5377;"><i class="fa fa-bars"></i></button>
+        <div class="collapse navbar-collapse"id="navbarSupportedContent">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'app:portada' %}"><i class="fa fa-home"></i> Inicio</a>
@@ -26,7 +29,19 @@
                     <li class="nav-item">
                         <a class="btn btn-primary" href="{% url 'app:carrito' %}"><i class="fa fa-shopping-cart fa-fw"></i>{% if total_productos %} {{ total_productos }}{% endif %}</a>
                     </li>
+                    <form action="{% url 'account_logout' %}" method="post">
+                                    {% csrf_token %}
+
+                            {% if user.is_authenticated %}
+                            <li class="nav-item ml-1"><button type="submit" class="SignUp" aria-label="Sign Up"><a
+                                        href="{% url 'account_logout' %}"></a>
+                                    Log Out
+                                </button>
+                            </li>
+                            {% endif %}
+                                </form>
                 </ul>
+                
             </div>
         </nav>
         <div class="slogan">

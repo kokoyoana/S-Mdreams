@@ -2,7 +2,7 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
-  background-color: #cfeae8;
+  background-color: #ffff;
   color: #16161a;
 }
 
@@ -36,7 +36,7 @@ header .menu {
   width: 100%;
 }
 header .menu .slogan {
-  color: #878c94;
+  color: #999999;
   font-family: 'Euphoria Script', cursive;
   font-size: 2.5rem;
   line-height: 2.5rem;
@@ -128,3 +128,44 @@ footer a {
 }
 .product .btn-primary { margin-bottom: 1rem; }
 .product .tab-content { margin-top: 1rem; }
+
+
+/*//Color de dropdown item*/ 
+.dropdown-item:hover, .dropdown-item:focus 
+{ 
+  color: #16181b; 
+  text-decoration: none; 
+  background-color: #FF9398; 
+} 
+a.nav-link{
+  color:black;
+  font-size: 22px;
+}
+
+span.carousel-control-next-icon{
+color:#ec0a15;
+background-color: #ec0a15;
+}
+span.carousel-control-prev-icon{
+color:#ec0a15;
+background-color: #ec0a15;
+}
+
+
+/* //Boton logout// */
+.SignUp {
+    display: inline-block;
+    font-weight: 600;
+    text-align: center;
+    outline: none;
+    flex: 0 0 auto;
+    border-radius: 8px;
+    height: 2.5rem;
+    color: white;
+    opacity: 1;
+    font-size: 1rem;
+    padding: 0px 1rem;
+    border: transparent;
+    background-color: rgb(12, 108, 242);
+    line-height: 2.5rem;
+    }
